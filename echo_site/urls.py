@@ -15,16 +15,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf.urls import include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from goflow.workflow import views as wfView
 
 import echo.views
 
 urlpatterns = [
+    # 管理员登录界面
     url(r'^admin/', admin.site.urls),
+    # 用户登录页面
     url(r'^index/', echo.views.index,name= 'index'),
-
+    # 设置默认页面
+    url(r'^$', echo.views.index,name= 'index'),
+    # 设置工作流goflow
+    url(r'^workflow/',wfView.index,name= 'index'),
+    # url(r'^workflow/',include('goflow.urls'),name= 'login'),
     #用户登陆列表
     #用户登陆
     url(r'login/', echo.views.login, name='login'),
@@ -32,6 +40,9 @@ urlpatterns = [
     url(r'logout/', echo.views.logout, name='logout'),
     #密码修改
     url(r'password_change/', echo.views.password_change, name='password_change'),
+
+    #测试链接
+    url(r'hello/', echo.views.hello, name='hello'),
 
     #基础资料的显示
     #内容显示,并通过定义name，来进行反向解析

@@ -104,6 +104,15 @@ def lists(request, table):
     return render(request,list_template,context)
 
 
+#用于测试
+def hello(request):
+    #创建context来集中处理需要传递到页面的数据
+    context = {
+        'page_title': '测试页面',
+        'sub_title': '123',
+    }
+    return render(request, 'hello.html',  context)
+
 #用于增加资源
 def add(request, table):
 

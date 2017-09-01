@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     #crispy app
     'crispy_forms',
     'echo',
+    'goflow.runtime',
+    'goflow.workflow',
+    'goflow.apptools',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -58,7 +61,7 @@ ROOT_URLCONF = 'echo_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'goflow/apptools/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

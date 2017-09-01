@@ -1,0 +1,19 @@
+hwz
+2017-8-29
+
+echosite示例博客
+http://blog.csdn.net/alex_chen_16/article/details/50822245
+
+goflow示例博客
+http://blog.sina.com.cn/s/blog_6f4d33770101ihai.html
+    博客上数据的安装只适用于老版本的django，新版本 python manage.py migrate 或者 python manage.py makemigrations
+
+
+goflow参考手册
+http://goflow.free.fr/doc/html/
+
+
+
+新版本dj没有patterns用法，使用url代替
+
+项目需要安装workflow
