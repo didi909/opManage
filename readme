@@ -17,3 +17,11 @@ http://goflow.free.fr/doc/html/
 新版本dj没有patterns用法，使用url代替
 
 项目需要安装workflow
+
+提交代码
+git push https://github.com/didi909/opManage.git
+
+models.py -- migrations -- db
+
+客户端 -- urls.py -- views.py -- templates -- forms.py -- db
+

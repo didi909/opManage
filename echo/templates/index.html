@@ -171,6 +171,15 @@
 						<b class="arrow"></b>
 					</li>
 
+                    <li class="">
+						<a href="{% url 'password_change'%}">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> 待办信息1 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
 					{% if 'task' in request.path or 'tools' in request.path %}
                             <li class="active open" >
                                 {% else %}
